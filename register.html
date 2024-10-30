@@ -16,17 +16,17 @@
                 await liff.init({liffId: "2006509501-J0v9Lpx8"});
                 
                 if(liff.isLoggedIn()){
-                    const prorile = await liff.getProfile();
-                    const userId = prorile.userId;
-                    const userIdDom = document.getElementById("userId");
-                    userIdDom.innerHTML = userId;
+                    // const prorile = await liff.getProfile();
+                    // const userId = prorile.userId;
+                    // const userIdDom = document.getElementById("userId");
+                    // userIdDom.innerHTML = userId;
 
                     const idtoken = await liff.getIDToken();
                     const idtokenDom = document.getElementById("idtoken");
                     idtokenDom.innerHTML = idtoken;
-                    // const gasUrl = `https://script.google.com/macros/s/AKfycbziWDGLr-z3EU37bkz4T45MexZRLCXHw9yq_ioiUuLKz_s5PFyQTbVrs2jQrKh46sCT/exec?path=liff/users/add&userId=${userId}`;
-                    // const url = liff.permanentLink.createUrlBy(gasUrl);
-                    // liff.openWindow({url:url,external: false});
+                    const gasUrl = `https://script.google.com/macros/s/AKfycbziWDGLr-z3EU37bkz4T45MexZRLCXHw9yq_ioiUuLKz_s5PFyQTbVrs2jQrKh46sCT/exec?path=liff/users/add&token=${idtoken}`;
+                    const url = liff.permanentLink.createUrlBy(gasUrl);
+                    liff.openWindow({url:url,external: false});
                 }
             }catch(e){
                 const errorDom = document.getElementById("error");
