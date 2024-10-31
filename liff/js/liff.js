@@ -7,8 +7,6 @@ export const initLiff = async (liffId,query) => {
         if(liff.isLoggedIn()){
 
             const idtoken = await liff.getIDToken();
-            const idtokenDom = document.getElementById("idtoken");
-            idtokenDom.innerHTML = idtoken;
             const gasUrl = `https://script.google.com/macros/s/${gasDeployId}/exec${query}&token=${idtoken}`;
             liff.openWindow({url:gasUrl,external: false});
         }
