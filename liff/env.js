@@ -1,6 +1,6 @@
 const registerClientId = "2006509501-J0v9Lpx8";
 const registerGuideId = "";
-const searchGuideId = "";
+const searchGuideId = "2006509501-jXVArD4O";
 const requestSupportId = "";
 const showAllSupportsId = "";
 const showMySupportsId = "";
