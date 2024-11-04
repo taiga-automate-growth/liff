@@ -3,5 +3,6 @@ import { initLiff } from "../liff.js";
 
 const liffId = requestSupportId;
 const query  = "?path=supports/create";
+const accountType = "client";
 
-initLiff(liffId, query);
+initLiff(liffId, query, accountType);
