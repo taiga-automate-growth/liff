@@ -1,7 +1,7 @@
-import { entryId } from "../../env.js";
+import { matchingId } from "../../env.js";
 import { initLiff } from "../liff.js";
 
-const liffId = entryId;
+const liffId = matchingId;
 const query  = "?path=supports&status=募集中";
 const accountType = "client";
 
