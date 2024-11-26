@@ -9,7 +9,6 @@ export const initLiff = async (liffId,query,accountType) => {
             const idtoken = await liff.getIDToken();
             const gasUrl = `https://script.google.com/macros/s/${gasDeployId}/exec${query}&lineToken=${idtoken}&accountType=${accountType}`;
             liff.openWindow({url:gasUrl,external: false});
-            liff.closeWindow();
         }
     }catch(e){
         const errorDom = document.getElementById("error");
